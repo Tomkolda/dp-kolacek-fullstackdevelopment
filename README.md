@@ -1,8 +1,5 @@
 <div align="center">
 
-<a href="https://free-fall.cz/" targer="_BLANK">
-  <img style="width: 80%;" src="https://ynoxtkknyjonqzfxdamv.supabase.co/storage/v1/object/public/logo/ff_napis_cerny_pruhledny.png">
-</a>
 
 **Next.js monorepo s Supabase backendem**
 
@@ -241,8 +238,3 @@ free-fall-web/
 
 ---
 
-<div align="center">
-
-**Vytvořeno s ❤️ pro FREE FALL**
-
-</div>
