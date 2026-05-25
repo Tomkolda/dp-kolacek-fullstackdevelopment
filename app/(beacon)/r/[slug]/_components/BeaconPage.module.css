@@ -1,0 +1,273 @@
+.page {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Blurred cover image used as full-screen background */
+.backgroundImage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(50px) brightness(0.7) saturate(1.4);
+  transform: scale(1.2);
+}
+
+/* Subtle vignette overlay for readability */
+.backgroundOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(0 0 0 / 15%) 0%,
+    rgb(0 0 0 / 50%) 100%
+  );
+}
+
+/* Fallback background when there's no cover image */
+.backgroundFallback {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    160deg,
+    #1a1a2e 0%,
+    #16213e 40%,
+    #0f3460 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Cover art */
+.coverWrapper {
+  width: 280px;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px rgb(0 0 0 / 50%),
+    0 2px 8px rgb(0 0 0 / 30%);
+  flex-shrink: 0;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a2a3e, #1a1a2e);
+}
+
+/* Text info section */
+.info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgb(255 255 255 / 75%);
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(255 255 255 / 70%);
+  text-align: center;
+  max-width: 420px;
+  margin-top: 4px;
+}
+
+/* YouTube embed */
+.youtubeWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 40%);
+}
+
+.youtubeIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Streaming link buttons */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+  cursor: pointer;
+  border: none;
+}
+
+.linkButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 40%);
+}
+
+.linkButton:active {
+  transform: translateY(0);
+}
+
+.linkButton svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* Platform-specific button colors */
+.youtube {
+  background: #f00;
+  color: #fff;
+}
+
+.youtube:hover {
+  background: #c00;
+}
+
+.spotify {
+  background: #1db954;
+  color: #fff;
+}
+
+.spotify:hover {
+  background: #1aa34a;
+}
+
+.apple {
+  background: #fc3c44;
+  color: #fff;
+}
+
+.apple:hover {
+  background: #e0353d;
+}
+
+.tidal {
+  background: #000;
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 20%);
+}
+
+.tidal:hover {
+  background: #1a1a1a;
+}
+
+.merch {
+  background: rgb(255 255 255 / 15%);
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 25%);
+  backdrop-filter: blur(8px);
+}
+
+.merch:hover {
+  background: rgb(255 255 255 / 22%);
+}
+
+/* Branding footer */
+.branding {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.brandingLink {
+  font-size: 0.8rem;
+  color: rgb(255 255 255 / 40%);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 150ms ease;
+}
+
+.brandingLink:hover {
+  color: rgb(255 255 255 / 65%);
+}
+
+/* Responsive adjustments */
+@media (width <= 36em) {
+  .page {
+    padding: 32px 16px;
+  }
+
+  .coverWrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    gap: 20px;
+  }
+}

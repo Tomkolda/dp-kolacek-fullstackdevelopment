@@ -1,0 +1,10 @@
+packages:
+  - '.'
+
+ignoredBuiltDependencies:
+  - esbuild
+
+onlyBuiltDependencies:
+  - sharp
+  - supabase
+  - unrs-resolver

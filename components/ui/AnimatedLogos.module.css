@@ -1,0 +1,21 @@
+.root {
+  background-color: light-dark(transparent, rgb(255 255 255 / 20%));
+  border-top: 1px solid light-dark(transparent, rgb(255 255 255 / 18%));
+  border-bottom: 1px solid light-dark(transparent, rgb(255 255 255 / 18%));
+}
+
+.logoItem {
+  flex-shrink: 0;
+}
+
+.logoImage {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+}
+
+:global(html[data-mantine-color-scheme='dark']) .logoItem {
+  padding: 0;
+}

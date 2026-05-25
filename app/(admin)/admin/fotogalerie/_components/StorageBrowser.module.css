@@ -1,0 +1,38 @@
+.root {
+  border: 1px solid var(--mantine-color-default-border);
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid var(--mantine-color-default-border);
+  background: var(--mantine-color-body);
+}
+
+.panels {
+  height: 500px;
+}
+
+.foldersPanel {
+  width: 280px;
+  min-width: 280px;
+  border-right: 1px solid var(--mantine-color-default-border);
+}
+
+.filesPanel {
+  flex: 1;
+  min-width: 0;
+}
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mantine-spacing-sm);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--mantine-color-default-hover);
+  }
+}

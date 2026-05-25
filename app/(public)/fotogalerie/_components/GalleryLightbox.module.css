@@ -1,0 +1,161 @@
+.modalInner {
+  padding: 0;
+  align-items: stretch;
+}
+
+.modalContent {
+  margin: 0;
+  background: rgb(0 0 0 / 92%);
+  box-shadow: none;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.modalHeader {
+  display: none;
+}
+
+.modalBody {
+  padding: 0;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  color: rgb(255 255 255 / 85%);
+  background: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(6px);
+}
+
+.closeButton:hover {
+  background: rgb(255 255 255 / 20%);
+  color: #fff;
+}
+
+.mainArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 0;
+  padding: 56px 60px 8px;
+}
+
+.mainImage {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--mantine-radius-sm);
+}
+
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  color: rgb(255 255 255 / 80%);
+  background: rgb(255 255 255 / 8%);
+  backdrop-filter: blur(4px);
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.navArrow:hover {
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+}
+
+.navArrowLeft {
+  left: 12px;
+}
+
+.navArrowRight {
+  right: 12px;
+}
+
+.caption {
+  text-align: center;
+  padding: 8px 16px 4px;
+  color: rgb(255 255 255 / 80%);
+  flex-shrink: 0;
+}
+
+.thumbnailStrip {
+  flex-shrink: 0;
+  padding: 10px 16px 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 25%) transparent;
+}
+
+.thumbnail {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border-radius: var(--mantine-radius-sm);
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  background: none;
+  overflow: hidden;
+  transition:
+    opacity 150ms ease,
+    border-color 150ms ease;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
+.thumbnailActive {
+  opacity: 1;
+  border-color: var(--mantine-color-myColor-6);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (width <= 48em) {
+  .mainArea {
+    padding: 48px 16px 8px;
+  }
+
+  .navArrow {
+    display: none;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+  }
+
+  .thumbnail {
+    width: 48px;
+    height: 48px;
+  }
+}

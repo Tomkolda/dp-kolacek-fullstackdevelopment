@@ -1,0 +1,15 @@
+.pageShell {
+  position: relative;
+}
+
+.heading {
+  letter-spacing: -0.02em;
+}
+
+.emptyState {
+  background: light-dark(
+    color-mix(in srgb, var(--mantine-color-gray-0) 78%, transparent),
+    color-mix(in srgb, var(--mantine-color-dark-7) 72%, transparent)
+  );
+  backdrop-filter: blur(6px);
+}

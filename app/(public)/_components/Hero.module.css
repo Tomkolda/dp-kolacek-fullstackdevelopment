@@ -1,0 +1,40 @@
+.hero {
+  --hero-header-offset: 84px;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: calc(-1 * var(--hero-header-offset));
+  padding-top: var(--hero-header-offset);
+  box-sizing: border-box;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100svh + var(--hero-header-offset));
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(rgb(0 0 0 / 34%), rgb(0 0 0 / 8%) 44%, rgb(0 0 0 / 30%));
+  pointer-events: none;
+}
+
+@media (width <= 62em) {
+  .hero {
+    --hero-header-offset: 70px;
+
+    background-position: 58% 40%;
+  }
+}
+
+@media (width <= 48em) {
+  .hero {
+    --hero-header-offset: 54px;
+
+    min-height: calc(72svh + var(--hero-header-offset));
+    background-position: 58% 26%;
+  }
+}

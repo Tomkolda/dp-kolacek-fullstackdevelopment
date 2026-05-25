@@ -1,0 +1,16 @@
+.sortButton {
+  all: unset;
+  cursor: pointer;
+  width: 100%;
+  border-radius: var(--mantine-radius-xs);
+}
+
+.sortButton:focus-visible {
+  outline: 2px solid var(--mantine-primary-color-filled);
+  outline-offset: 2px;
+}
+
+.archivedRow {
+  opacity: 0.4;
+  font-style: italic;
+}

@@ -1,0 +1,88 @@
+.container {
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-black)
+  );
+  border-top: 1px solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
+}
+
+.nav {
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.navGroup {
+  min-width: 130px;
+}
+
+.navSubLinks {
+  margin-top: 4px;
+}
+
+.navHeading {
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-white));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 700;
+}
+
+.navHeadingLink {
+  transition: color 180ms ease;
+}
+
+.navHeadingLink:hover {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.navSubLink {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-5));
+  font-size: var(--mantine-font-size-sm);
+  line-height: 1.45;
+  transition: color 180ms ease;
+}
+
+.navSubLink:hover {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.socialList {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  gap: var(--mantine-spacing-xs);
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--mantine-radius-sm);
+  border: none;
+  background-color: light-dark(var(--mantine-color-white), transparent);
+  transition:
+    background-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.socialLink:hover {
+  background-color: light-dark(var(--mantine-color-gray-0), transparent);
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  background-color: light-dark(
+    var(--social-icon-color),
+    var(--mantine-color-white)
+  );
+  mask-image: var(--social-icon-mask);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}

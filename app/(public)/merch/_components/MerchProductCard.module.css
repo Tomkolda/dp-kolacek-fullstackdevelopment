@@ -1,0 +1,111 @@
+.card {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: light-dark(
+    linear-gradient(
+      180deg,
+      var(--mantine-color-gray-0) 0%,
+      var(--mantine-color-gray-1) 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--mantine-color-dark-7) 88%, transparent) 0%,
+      color-mix(in srgb, var(--mantine-color-dark-6) 90%, transparent) 100%
+    )
+  );
+}
+
+.mediaSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.coverImage {
+  transition: opacity 200ms ease;
+}
+
+.coverFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: light-dark(
+    linear-gradient(
+      135deg,
+      var(--mantine-color-gray-1),
+      var(--mantine-color-gray-3)
+    ),
+    linear-gradient(
+      135deg,
+      var(--mantine-color-dark-6),
+      var(--mantine-color-dark-8)
+    )
+  );
+}
+
+/* Navigation arrows */
+
+.navPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: opacity 180ms ease;
+  left: 8px;
+}
+
+.navNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: opacity 180ms ease;
+  right: 8px;
+}
+
+@media (hover: hover) {
+  .navPrev,
+  .navNext {
+    opacity: 0;
+  }
+
+  .mediaSection:hover .navPrev,
+  .mediaSection:hover .navNext {
+    opacity: 1;
+  }
+}
+
+/* Dot indicators */
+
+.dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in srgb, white 50%, transparent);
+  transition: background 180ms ease;
+}
+
+.dot[data-active] {
+  background: white;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+}
+
+.cardBody {
+  padding: var(--mantine-spacing-sm) var(--mantine-spacing-md)
+    var(--mantine-spacing-md);
+}

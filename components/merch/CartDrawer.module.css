@@ -1,0 +1,28 @@
+.itemRow {
+  display: flex;
+  gap: var(--mantine-spacing-sm);
+  align-items: flex-start;
+}
+
+.itemImage {
+  flex-shrink: 0;
+  border-radius: var(--mantine-radius-sm);
+  overflow: hidden;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemPrice {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  white-space: nowrap;
+}
+
+.footer {
+  border-top: 1px solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  padding-top: var(--mantine-spacing-md);
+}

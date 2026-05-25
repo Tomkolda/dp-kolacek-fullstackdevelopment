@@ -1,0 +1,21 @@
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  box-shadow: var(--mantine-shadow-lg);
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.fab:hover {
+  transform: scale(1.08);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  pointer-events: none;
+}

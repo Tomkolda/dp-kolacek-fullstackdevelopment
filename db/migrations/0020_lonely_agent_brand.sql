@@ -1,0 +1,2 @@
+ALTER TABLE "web_items" DROP CONSTRAINT "web_items_key_chk";--> statement-breakpoint
+ALTER TABLE "web_items" ADD CONSTRAINT "web_items_key_chk" CHECK ("web_items"."key" IN ('contact', 'fb_news', 'logo', 'organizer_materials', 'stats', 'video_preview'));
