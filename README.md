@@ -69,7 +69,7 @@ sudo apt install -y nodejs make git gh jq
 
 ```bash
 gh
-git clone https://github.com/marek-sikora-cze/free-fall-web.git
+git clone https://github.com/Tomkolda/dp-kolacek-fullstackdevelopment
 cd free-fall-web
 ```
 
